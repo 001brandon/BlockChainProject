@@ -15,6 +15,8 @@ public:
 
     std::string getHash();
     std::string getPrevHash();
+    int getIndex();
+    void printTransaction();
 
 
     void MineBlock(uint32_t nDifficulty);

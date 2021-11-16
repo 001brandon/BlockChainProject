@@ -2,8 +2,8 @@ CC = g++
 
 
 
-final: main.o sha256.o block.o transaction.o
-	$(CC) -g main.o sha256.o block.o transaction.o -o test -lcrypto -lssl
+final: main.o sha256.o block.o transaction.o Blockchain.o
+	$(CC) -g main.o sha256.o block.o transaction.o Blockchain.o -o test -lcrypto -lssl
 
 
 main.o: main.cpp
@@ -18,5 +18,8 @@ block.o: block.cpp
 transaction.o: transaction.cpp
 	$(CC) -g -c transaction.cpp
 
+Blockchain.o:  Blockchain.cpp
+	$(CC) -g -c Blockchain.cpp
+
 clean:
-	rm test main.o sha256.o block.o transaction.o
+	rm test main.o sha256.o block.o transaction.o Blockchain.o
