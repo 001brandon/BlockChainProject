@@ -10,4 +10,6 @@ struct transaction{
     time_t timestamp;
 };
 
+void createTransaction(std::string senderKey, std::string recieverKey, float amount);
+
 #endif

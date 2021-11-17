@@ -17,12 +17,13 @@ public:
     std::string getPrevHash();
     int getIndex();
     void printTransaction();
+    bool isHashValid();
 
 
-    void MineBlock(uint32_t nDifficulty);
+    void MineBlock(uint32_t difficulty);
 private:
     int index;
-    //int nonce;
+    //int nonce; //used in mining
     transaction data;
     std::string blockHash;
     std::string prevHash;
